@@ -1,0 +1,207 @@
+/***********************
+          section about   
+                  ****************************/
+.about{
+  width: 100%;
+  height: 100vh;
+  margin-top: 300px;
+}
+.main-about{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  
+}
+.left-about{
+  display: flex;
+  flex-direction: column;
+  gap:40px ;
+  width: 50%;
+  height: 100%;
+}
+.left-about h4{
+  width: 200px;
+  padding: 10px 0;
+  background-color: rgba(175, 191, 105, 0.97);
+  border-radius: 3px 30px 13px 33px;
+  color: white;
+  text-align: center;
+}
+.left-about h1{
+  width: 96%;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.left-about p{
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.603);
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.icons-about{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+
+}
+.icons-about .icon-about{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.icons-about .ic-ab{
+  font-size: 3rem;
+  color: rgb(138, 135, 79);
+
+}
+.icon-about p{
+  text-align: center;
+}
+.left-about .btn-about {
+  width: 180px;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: rgb(158, 151, 84);
+  border: none;
+  color: white;
+  box-shadow: 15px -15px 0 0 rgba(220, 218, 178, 0.539);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.left-about .btn-about:hover {
+  width: 180px;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.226);
+}
+
+.right-about{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.shape::before{
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 90%;
+  background-color: goldenrod;
+  top: 50%;
+  left:60%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.shapeTwo::before{
+  position: absolute;
+  content: "TRINING";
+  font-size: 100px;
+  width: 100px;
+  height: 90%;
+  top: -160px;
+  left:-180px;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.128);
+  letter-spacing: 9px;
+  transform: rotate(90deg);
+}
+.img-about img{
+  position: absolute;
+  width: 400px;
+  right: 10%;
+
+
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+  .about{
+    width: 100%;
+    height: 100vh;
+    margin-top: 900px;
+  }
+  
+  .left-about h1 {
+    font-size: 2rem;
+  }
+  .left-about p {
+    font-size: 1rem;
+  }
+  .icons-about .ic-ab {
+    font-size: 2.5rem;
+  }
+  .img-about img {
+    width: 350px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .main-about {
+    flex-direction: row;
+    padding: 20px;
+  }
+  .left-about, .right-about {
+    width: 100%;
+  }
+  .icons-about {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .shape::before{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-about h1 {
+    font-size: 1.5rem;
+  }
+  .left-about p {
+    font-size: 0.9rem;
+  }
+  .icons-about .ic-ab {
+    font-size: 2rem;
+  }
+  .img-about img {
+    width: 300px;
+  }
+  .shape::before{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-about h4 {
+    width: 150px;
+    font-size: 0.9rem;
+  }
+  .left-about h1 {
+    font-size: 1.2rem;
+  }
+  .left-about p {
+    font-size: 0.8rem;
+  }
+  .left-about .btn-about {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .img-about img {
+    width: 250px;
+    right: 5%;
+  }
+  .shape::before{
+    display: none;
+  }
+}

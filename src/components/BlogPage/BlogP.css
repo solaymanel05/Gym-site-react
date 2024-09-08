@@ -1,0 +1,365 @@
+.cont-about {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+.cont-about img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cont-about .backg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(1, 1, 1, 0.68),
+    60%,
+    rgb(12, 12, 12)
+  );
+}
+
+/* src/Blog.css */
+.blog-container {
+  display: flex;
+  padding: 20px;
+}
+.cont-blog-left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 30px;
+  margin-right: 20px;
+}
+.blog-left {
+  width: 100%;
+  height: 100%;
+  flex: 2;
+  margin-right: 20px;
+}
+.blog-left h1,
+.title-of-img-blog p {
+  width: 100%;
+  text-align: left;
+}
+.blog-left .title-of-img-blog {
+  display: flex;
+  gap: 5px;
+}
+.blog-left .title-of-img-blog .icon-title-blog {
+  color: #ff990091;
+}
+.blog-left .paragraph-title {
+  width: 100%;
+}
+.blog-left .paragraph-blog {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.511);
+  text-transform: capitalize;
+}
+.blog-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+.blog-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.read-more-btn {
+  margin-top: 30px;
+  background-color: #ffc400;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 15px -15px 0 rgba(218, 165, 32, 0.32);
+  transition: all 0.5s ease-in-out;
+}
+.read-more-btn:hover {
+  background-color: #ffc400;
+  color: white;
+  box-shadow: 0 0 0 rgba(218, 165, 32, 0.32);
+  border: none;
+  cursor: pointer;
+}
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+.search-bar input {
+  flex: 1;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+::placeholder {
+  color: rgba(0, 0, 0, 0.553);
+}
+.search-bar button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-left: none;
+  background-color: #aaac30;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+.icon-search-blog {
+  font-size: 20px;
+}
+.categories,
+.recent-posts,
+.popular-tags {
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin-bottom: 90px;
+}
+.categories h2,
+.recent-posts h2 {
+  margin-bottom: 20px;
+}
+.categories ul,
+.recent-posts ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.category-blog {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.post-blog {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+}
+.content-post-blog {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.content-post-blog li h5 {
+  text-align: left;
+  font-size: 0.9rem;
+}
+.content-post-blog li h3 {
+  text-align: left;
+  font-size: 1.1rem;
+  color: black;
+}
+.categories li,
+.recent-posts li {
+  padding: 5px 10px;
+  color: rgba(0, 0, 0, 0.454);
+  font-size: 1.1rem;
+}
+.icon-blog {
+  margin-right: 5px;
+}
+.cont-img-post-blog {
+  position: relative;
+  width: 50%;
+  height: 150px;
+  object-fit: cover;
+  background-color: #ffc400;
+}
+.postBlog-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.popular-tags .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popular-tags .tag {
+  background-color: #ffffff96;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.img-ads {
+  position: relative;
+}
+.sold::before {
+  content: "35%";
+  position: absolute;
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  top: 2%;
+  left: 29px;
+  z-index: 10;
+}
+.sold::after {
+  content: "Flat Discount";
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  top: 15%;
+  left: 3%;
+  z-index: 10;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .cont-about {
+    height: 45vh;
+  }
+  .blog-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cont-about {
+    height: 40vh;
+  }
+  .blog-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .cont-blog-left {
+    margin-right: 0;
+  }
+  .blog-right {
+    margin-top: 20px;
+  }
+  .blog-image {
+    height: 300px;
+  }
+  .img-ads {
+    position: relative;
+  }
+  .sold::before {
+    content: "35%";
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    top: 2%;
+    left: 29px;
+    z-index: 10;
+  }
+  .sold::after {
+    content: "Flat Discount";
+    position: absolute;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    top: 20%;
+    left: 3%;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .cont-about {
+    height: 35vh;
+  }
+  .cont-about h1 {
+    font-size: 1.5rem;
+  }
+  .blog-left .paragraph-blog {
+    font-size: 14px;
+  }
+  .blog-image {
+    height: 250px;
+  }
+  .read-more-btn {
+    padding: 10px 20px;
+  }
+  .search-bar input {
+    padding: 15px 10px;
+  }
+  .search-bar button {
+    padding: 10px 15px;
+  }
+  .img-ads {
+    position: relative;
+  }
+  .sold::before {
+    content: "35%";
+    position: absolute;
+    font-size: 80px;
+    font-weight: 600;
+    color: white;
+    top: 2%;
+    left: 29px;
+    z-index: 10;
+  }
+  .sold::after {
+    content: "Flat Discount";
+    position: absolute;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    top: 18%;
+    left: 3%;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 576px) {
+  .cont-about {
+    height: 30vh;
+  }
+  .cont-about h1 {
+    font-size: 1.2rem;
+  }
+  .blog-left .paragraph-blog {
+    font-size: 12px;
+  }
+  .blog-image {
+    height: 200px;
+  }
+  .read-more-btn {
+    padding: 10px 15px;
+  }
+  .search-bar input {
+    padding: 10px 5px;
+  }
+  .search-bar button {
+    padding: 5px 10px;
+  }
+  .img-ads {
+  position: relative;
+}
+.sold::before {
+  content: "35%";
+  position: absolute;
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  top: 2%;
+  left: 29px;
+  z-index: 10;
+}
+.sold::after {
+  content: "Flat Discount";
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  top: 18%;
+  left: 3%;
+  z-index: 10;
+}
+
+}

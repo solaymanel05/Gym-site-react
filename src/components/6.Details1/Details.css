@@ -1,0 +1,156 @@
+/* Default Styles */
+.detailsOne {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.text-det-one {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
+}
+.text-det-one h4, .text-det-one h1, .text-det-one p {
+  text-align: center;
+}
+.text-det-one h4 {
+  background-color: goldenrod;
+  color: white;
+  width: 150px;
+  padding: 10px 0;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.text-det-one h1 {
+  font-size: 2.5rem;
+}
+.text-det-one p {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.425);
+}
+
+/* Card section */
+.card-detailsOne {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 30px;
+}
+.card-detailsOne > div {
+  display: flex;
+  gap: 20px; /* Space between cards */
+}
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  width: 300px; /* Adjust width as needed */
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.icon-det {
+  color: rgba(0, 0, 0, 0.564);
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (min-width: 100px) and (max-width: 600px) {
+  .text-det-one {
+    margin-top: 20px;
+  }
+  .text-det-one h4 {
+    width: 100px;
+    padding: 8px 0;
+  }
+  .text-det-one h1 {
+    font-size: 2rem;
+  }
+  .text-det-one p {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .card-detailsOne {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card img {
+    width: 100%;
+  }
+  .card-detailsOne > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media (min-width: 600px) and (max-width:900px) {
+  .text-det-one h1 {
+    font-size: 2.2rem;
+  }
+  .text-det-one p {
+    width: 80%;
+    font-size: 1rem;
+  }
+  .card {
+    width: 45%;
+  }
+  .card img {
+    width: 100%;
+  }
+  .card-detailsOne {
+    display: flex;
+    
+    padding: 20px;
+    margin-top: 30px;
+  }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 900px) and (max-width: 1300px) {
+  .text-det-one p {
+    width: 500px;
+  }
+  .card {
+    width: 300px;
+  }
+
+}

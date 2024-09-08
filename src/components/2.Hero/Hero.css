@@ -1,0 +1,276 @@
+/*************************
+  Section Hero 
+*************************/
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh + 70px);
+}
+
+.hero-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-hero {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-special {
+  width: 200px;
+  background-color: rgba(211, 228, 137, 0.363);
+  border-radius: 3px 30px 13px 33px;
+  color: white;
+}
+
+.title-special p {
+  text-align: center;
+  padding: 10px 0;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.main-hero h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: white;
+}
+
+.main-hero h4 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
+  text-align: left;
+}
+
+.main-hero .btnClassOne {
+  width: 180px;
+  height: 50px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 15px -15px 0 0 rgba(255, 255, 255, 0.183);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.main-hero .btnClassOne:hover {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.226);
+}
+
+/*****************/
+
+.social {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  transform: translate(50%, 50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.share {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 19px;
+  transform: rotate(90deg);
+  color: white;
+}
+
+.line {
+  height: 40px;
+  width: 3px;
+  background-color: rgb(223, 230, 118);
+  margin: 10px auto;
+  margin-top: 25px;
+}
+
+.icons-social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon-h {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-h:hover {
+  color: rgb(223, 230, 118);
+}
+
+/* section cards of section hero */
+.cards {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card {
+  width: 350px;
+  height: 300px;
+  background: rgb(255, 255, 255);
+  border-radius: 30px 0 30px 0;
+  box-shadow: 30px 30px 90px rgba(0, 0, 0, 0.237);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cards .card:hover {
+  background-color: rgb(248, 241, 207);
+}
+
+.card .main-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.main-card .card-icon {
+  color: rgb(163, 168, 87);
+  font-size: 40px;
+}
+
+.main-card h1 {
+  font-size: 30px;
+}
+
+.main-card p {
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+  .main-hero {
+    transform: translate(-40%, -50%);
+  }
+
+  .social {
+    left: 80%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    top: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-hero h4 {
+    font-size: 2rem;
+  }
+
+  .main-hero .btnClassOne {
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .social {
+    left: 75%;
+  }
+
+  .cards .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-hero {
+    transform: translate(-50%, -50%);
+  }
+
+  .main-hero h1 {
+    font-size: 2rem;
+  }
+
+  .main-hero h4 {
+    font-size: 1.5rem;
+  }
+
+  .main-hero .btnClassOne {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .social {
+    top: 10%;
+    left: 70%;
+  }
+
+  .cards .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .main-hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .main-hero .btnClassOne {
+    width: 120px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .social {
+    top: 5%;
+    left: 65%;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-hero h4 {
+    font-size: 1rem;
+  }
+
+  .main-hero .btnClassOne {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .cards {
+    top: 80%;
+  }
+}

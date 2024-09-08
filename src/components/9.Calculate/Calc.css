@@ -1,0 +1,171 @@
+/* Default styles (for larger screens) */
+.calc-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  margin-top: 50px;
+  background-image: linear-gradient(
+    90deg,
+    black,
+    60%,
+    rgba(218, 165, 32, 0.16)
+  );
+}
+.calc-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-calc {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content-calc h1 {
+  text-align: left;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.content-calc .calc-spa {
+  color: goldenrod;
+}
+.content-calc p {
+  text-align: left;
+  color: white;
+  font-size: 1.1rem;
+  width: 80%;
+}
+.clc-inp {
+  display: flex;
+  gap: 30px;
+}
+.clc-inp .inp-calc-bmi,
+.clc-inp .inp-calc-weight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.inp-calc-bmi input,
+.inp-calc-weight input {
+  width: 210px;
+  height: 50px;
+  border: 2px solid rgba(128, 128, 128, 0.84);
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0 5px;
+}
+.inp-calc-bmi label,
+.inp-calc-weight label {
+  color: white;
+}
+.result-bmi {
+  display: inline;
+  color: goldenrod;
+  font-size: 0.9rem;
+}
+.white-placeholder::placeholder {
+  color: rgba(128, 128, 128, 0.79);
+  opacity: 1; /* Ensure the placeholder text is fully opaque */
+}
+.content-calc button {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(76, 75, 73);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+.content-calc button:hover {
+  width: 150px;
+  height: 50px;
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .calc-container {
+    height: 70vh;
+  }
+  .content-calc {
+    top: 30px;
+    left: 30px;
+    gap: 20px;
+  }
+  .content-calc h1 {
+    font-size: 2rem;
+  }
+  .content-calc p {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .clc-inp {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .inp-calc-bmi input,
+  .inp-calc-weight input {
+    width: 180px;
+    height: 40px;
+  }
+  .content-calc button {
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .content-calc button:hover {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .calc-container {
+    height: 60vh;
+  }
+  .content-calc {
+    top: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+  .content-calc h1 {
+    font-size: 1.5rem;
+  }
+  .content-calc p {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .clc-inp {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inp-calc-bmi input,
+  .inp-calc-weight input {
+    width: 150px;
+    height: 35px;
+  }
+  .content-calc button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  .content-calc button:hover {
+    width: 100px;
+    height: 35px;
+  }
+}

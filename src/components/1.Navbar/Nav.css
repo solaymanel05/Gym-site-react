@@ -1,0 +1,340 @@
+/* Nav.css */
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav.show {
+  background-color: black;
+}
+
+.logo-of-nav {
+  width: 200px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+ul li a:hover {
+  color: goldenrod;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.right-nav .icon-nav {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.5s;
+}
+
+.right-nav .icon-nav:hover {
+  color: rgb(186, 167, 47);
+}
+
+.right-nav .join {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgba(218, 165, 32, 0.484);
+  padding: 10px 20px;
+}
+
+.join .icon-plus {
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: goldenrod;
+  transition: all 0.7s;
+}
+
+.join .icon-plus:hover {
+  color: rgb(233, 180, 46);
+  transform: rotate(360deg);
+}
+
+.join h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+}
+
+.details {
+  display: none;
+}
+
+.details.show {
+  display: block;
+}
+
+.more-details {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Hidden off-screen */
+}
+
+.more-details.show {
+  display: block;
+  transform: translateX(0); /* Slide in */
+}
+.iconBar{
+  color: white;
+  display: none;
+}
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:-1000px;
+  background-color: rgb(110, 112, 40);
+  transition: all 0.7s ease-in-out;
+  display: none;
+  z-index: 1000;
+}
+.modal.show{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: 10%;
+  background-color: rgb(0, 0, 0);
+  z-index: 1000;
+}
+.modal ul{
+  display: flex;
+  flex-direction: column;
+}
+.closemodal{
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  color: goldenrod;
+
+}
+/* Media Queries for Responsiveness */
+
+@media (max-width: 992px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo-of-nav {
+    width: 150px;
+  }
+
+  ul {
+    display: none;
+    gap: 20px;
+  }
+
+  ul li a {
+    font-size: 1rem;
+  }
+
+  .right-nav {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .right-nav .icon-nav {
+    font-size: 1.2rem;
+  }
+
+  .join {
+    padding: 8px 16px;
+    gap: 5px;
+  }
+
+  .join .icon-plus {
+    font-size: 1.5rem;
+  }
+
+  .join h2 {
+    font-size: 0.9rem;
+  }
+  .iconBar{
+    color: white;
+    display: block;
+  }
+  .modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:-1000px;
+    background-color: rgb(110, 112, 40);
+    transition: all 0.7s ease-in-out;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  .logo-of-nav {
+    width: 120px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    display: none;
+  }
+
+  .right-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .join {
+    padding: 6px 12px;
+    display: none;
+  
+  }
+  .join .icon-plus {
+    font-size: 1.5rem;
+  
+  }
+  .join h2 {
+    font-size: 0.8rem;
+  
+  }
+  .iconBar{
+    color: white;
+    display: block;
+  }
+  .modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:-1000px;
+    background-color: rgb(110, 112, 40);
+    transition: all 0.7s ease-in-out;
+    display: block;
+  }
+  .modal.show{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top: 10%;
+    background-color: rgb(0, 0, 0);
+    
+  }
+  ul {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width:100px) and (max-width:570px){
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .logo-of-nav {
+    width: 100px;
+  }
+
+  ul {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  ul li a {
+    font-size: 0.9rem;
+  }
+
+  .right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .right-nav .icon-nav {
+    font-size: 1rem;
+  }
+
+  .join {
+    padding: 5px 10px;
+    gap: 5px;
+    display: none;
+  }
+
+  .join .icon-plus {
+    font-size: 1.2rem;
+  }
+
+  .join h2 {
+    font-size: 0.7rem;
+  }
+  .iconBar{
+    color: white;
+    display: block;
+  }
+  .modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:-1000px;
+    background-color: rgb(110, 112, 40);
+    transition: all 0.7s ease-in-out;
+    display: block;
+  }
+}

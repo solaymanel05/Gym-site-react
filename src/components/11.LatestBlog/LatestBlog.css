@@ -1,0 +1,149 @@
+.latest-blog {
+  text-align: center;
+  padding: 50px;
+}
+
+.title-blog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.title-blog h2{
+  text-align: center;
+  background-color: goldenrod;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 230px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.title-blog h1{
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.title-blog p{
+  width: 400px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.575);
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.blog-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.blog-card .blog-date {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.blog-card .blog-summary {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.blog-card .btn-blog-link {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(231, 199, 57);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 240, 12);
+  margin-top: 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow: 15px -15px 0 0 rgba(92, 92, 91, 0.21);
+  transition: all 0.5s ease-in-out;
+}
+
+.blog-card .btn-blog-link:hover {
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 0 0 0 rgba(12, 11, 11, 0);
+  text-transform: uppercase;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .title-blog h1 {
+    font-size: 2rem;
+  }
+  .title-blog p {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  .blog-card {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-blog {
+    padding: 30px;
+  }
+  .title-blog h1 {
+    font-size: 1.8rem;
+  }
+  .title-blog p {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+  .blog-card {
+    margin: 0 auto;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-blog {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .title-blog h2 {
+    width: 200px;
+    font-size: 1rem;
+  }
+  .title-blog h1 {
+    font-size: 1.5rem;
+  }
+  .title-blog p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .blog-card {
+    width: 100%;
+  }
+  .blog-card .btn-blog-link {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

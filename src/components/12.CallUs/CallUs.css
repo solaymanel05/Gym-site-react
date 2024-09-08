@@ -1,0 +1,128 @@
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin-top: 50px;
+  background-image: linear-gradient(90deg, black, 60%, rgba(218, 165, 32, 0.16));
+}
+
+.contact-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-contact {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content-contact h1 {
+  text-align: left;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.content-contact .contact-spa {
+  color: goldenrod;
+}
+
+.content-contact h2 {
+  text-align: left;
+  color: white;
+  font-size: 2rem;
+  width: 80%;
+}
+
+.content-contact button {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-color: rgba(240, 163, 9, 0.571);
+  box-shadow: 15px -15px 0 0 rgba(164, 139, 13, 0.151);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.content-contact button:hover {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(216, 160, 18);
+  color: white;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.064);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .content-contact {
+    top: 40px;
+    left: 40px;
+  }
+  .content-contact h1 {
+    font-size: 2rem;
+  }
+  .content-contact h2 {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    height: 40vh;
+    margin-top: 40px;
+  }
+  .content-contact {
+    top: 30px;
+    left: 30px;
+  }
+  .content-contact h1 {
+    font-size: 1.8rem;
+  }
+  .content-contact h2 {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  .content-contact button {
+    width: 130px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    height: 30vh;
+    margin-top: 30px;
+  
+  }
+  .content-contact {
+    top: 20px;
+    left: 20px;
+    gap: 20px;
+  }
+  .content-contact h1 {
+    font-size: 1.5rem;
+  }
+  .content-contact h2 {
+    font-size: 1rem;
+  }
+  .content-contact button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
